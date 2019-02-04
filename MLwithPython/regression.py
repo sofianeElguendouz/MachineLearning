@@ -39,4 +39,13 @@ plt.xlabel("Engine size")
 plt.ylabel("Emission")
 plt.show()
 
+#### Modeling Using sklearn package to model data.
+from sklearn import linear_model
+regr = linear_model.LinearRegression()
+train_x = np.asanyarray(train[['ENGINESIZE']])
+train_y = np.asanyarray(train[['CO2EMISSIONS']])
+regr.fit (train_x, train_y)
+# The coefficients
+print ('Coefficients: ', regr.coef_)
+print ('Intercept: ',regr.intercept_)
 
