@@ -24,3 +24,29 @@ plt.plot(x,y, 'r')
 plt.ylabel('Dependent Variable')
 plt.xlabel('Indepdendent Variable')
 plt.show()
+
+##############################################################################
+
+import numpy as np
+import pandas as pd
+
+#downloading dataset
+!wget -nv -O china_gdp.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/china_gdp.csv
+    
+df = pd.read_csv("china_gdp.csv")
+df.head(10)
+
+plt.figure(figsize=(8,5))
+x_data, y_data = (df["Year"].values, df["Value"].values)
+plt.plot(x_data, y_data, 'ro')
+plt.ylabel('GDP')
+plt.xlabel('Year')
+plt.show()
+
+X = np.arange(-5.0, 5.0, 0.1)
+Y = 1.0 / (1.0 + np.exp(-X))
+
+plt.plot(X,Y) 
+plt.ylabel('Dependent Variable')
+plt.xlabel('Indepdendent Variable')
+plt.show()
