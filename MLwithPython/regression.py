@@ -28,3 +28,7 @@ plt.scatter(cdf.CYLINDERS,cdf.CO2EMISSIONS, color = 'red')
 plt.xlabel("CYLINDERS")
 plt.ylabel("CO2EMISSIONS")
 plt.show()
+
+msk = np.random.rand(len(df)) < 0.8
+train = cdf[msk]
+test = cdf[~msk]
