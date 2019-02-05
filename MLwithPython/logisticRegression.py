@@ -92,3 +92,12 @@ print (classification_report(y_test, yhat))
 #log loss
 from sklearn.metrics import log_loss
 log_loss(y_test, yhat_prob)
+
+# test with new solver and new Inverse of regularization strength
+
+my_LRM = LogisticRegression(C = 0.05, solver = "saga").fit(X_train,y_train)
+my_predict = my_LRM.predict(X_test)
+my_predict_proba = my_LRM.predict_proba(X_test)
+jaccard_similarity_score(y_test, my_predict)
+log_loss(y_test, my_predict_proba)
+
