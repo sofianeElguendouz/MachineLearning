@@ -19,4 +19,6 @@ X[0:5]
 #Labels
 y = df['custcat'].values
 y[0:5]
-
+#Standardization of data
+X = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
+X[0:5]
