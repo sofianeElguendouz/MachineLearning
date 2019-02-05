@@ -89,4 +89,6 @@ plot_confusion_matrix(cnf_matrix, classes=['churn=1','churn=0'],normalize= False
 
 #summary
 print (classification_report(y_test, yhat))
-
+#log loss
+from sklearn.metrics import log_loss
+log_loss(y_test, yhat_prob)
