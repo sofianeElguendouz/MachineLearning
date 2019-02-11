@@ -70,4 +70,10 @@ k_means_cluster_centers = k_means1.cluster_centers_
 cust_df = pd.read_csv("Cust_Segmentation.csv")
 #preprocessing
 df = cust_df.drop('Address', axis=1)
+#normalize data over stadard deviation
+from sklearn.preprocessing import StandardScaler
+X = df.values[:,1:]
+X = np.nan_to_num(X)
+Clus_dataSet = StandardScaler().fit_transform(X)
+
 
