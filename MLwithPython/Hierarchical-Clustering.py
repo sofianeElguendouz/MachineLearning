@@ -52,3 +52,7 @@ dist_matrix = distance_matrix(X1,X1)
 Z = hierarchy.linkage(dist_matrix, 'complete')
 dendro = hierarchy.dendrogram(Z)
 
+#dendogram with average linkage
+dist_matrix1 = distance_matrix(X1,X1)
+z1 = hierarchy.linkage(dist_matrix1, 'average')
+dendro1 = hierarchy.dendrogram(z1)
