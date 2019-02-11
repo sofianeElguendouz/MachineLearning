@@ -55,3 +55,19 @@ ax.set_xticks(())
 ax.set_yticks(())
 # Show the plot
 plt.show()
+
+#k-means with k=3
+# write your code here
+k_means1 = KMeans(init="k-means++", n_clusters=3, n_init=10)
+k_means1.fit(X)
+k_means_labels = k_means1.labels_
+k_means_cluster_centers = k_means1.cluster_centers_
+
+
+#2- customer segmentation with k-means
+!wget -O Cust_Segmentation.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/Cust_Segmentation.csv
+ import pandas as pd
+cust_df = pd.read_csv("Cust_Segmentation.csv")
+#preprocessing
+df = cust_df.drop('Address', axis=1)
+
