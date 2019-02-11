@@ -56,3 +56,10 @@ dendro = hierarchy.dendrogram(Z)
 dist_matrix1 = distance_matrix(X1,X1)
 z1 = hierarchy.linkage(dist_matrix1, 'average')
 dendro1 = hierarchy.dendrogram(z1)
+
+#vehicule dataset
+!wget -O cars_clus.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/cars_clus.csv
+filename = 'cars_clus.csv'
+#Read csv
+pdf = pd.read_csv(filename)
+
