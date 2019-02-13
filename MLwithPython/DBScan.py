@@ -196,8 +196,6 @@ my_map.shadedrelief()
 # To create a color map
 colors = plt.get_cmap('jet')(np.linspace(0.0, 1.0, clusterNum))
 
-
-
 #Visualization1
 for clust_number in set(labels):
     c=(([0.4,0.4,0.4]) if clust_number == -1 else colors[np.int(clust_number)])
