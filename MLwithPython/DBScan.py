@@ -119,7 +119,6 @@ pdf["Clus_Db"]=labels
 realClusterNum=len(set(labels)) - (1 if -1 in labels else 0)
 clusterNum = len(set(labels)) 
 
-
 # A sample of clusters
 pdf[["Stn_Name","Tx","Tm","Clus_Db"]].head(5)
 
@@ -171,7 +170,6 @@ pdf["Clus_Db"]=labels
 
 realClusterNum=len(set(labels)) - (1 if -1 in labels else 0)
 clusterNum = len(set(labels)) 
-
 
 # A sample of clusters
 pdf[["Stn_Name","Tx","Tm","Clus_Db"]].head(5)
