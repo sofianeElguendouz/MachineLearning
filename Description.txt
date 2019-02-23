@@ -1,1 +1,2 @@
-
+This folder contain programs code while learning machine leraning with python following the cognitive class courses ! 
+Enjoy :D 
