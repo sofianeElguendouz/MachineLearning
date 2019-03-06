@@ -1,6 +1,7 @@
-This folder contain programs code while learning machine leraning with python following the cognitive class courses ! 
+This folder contains programs code writen during learning machine leraning with python following the cognitive class courses ! 
 -Supervised learning
   classification
   Regression
--Unsupervised learning 
+-Unsupervised learning
+  clustering 
 Enjoy :D 
