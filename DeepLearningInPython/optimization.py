@@ -56,3 +56,16 @@ mse_1 = mean_squared_error(target_actuals, model_output_1)
 # Print mse_0 and mse_1
 print("Mean squared error with weights_0: %f" %mse_0)
 print("Mean squared error with weights_1: %f" %mse_1)
+
+#################################################################
+# Calculate the predictions: preds
+preds = (input_data * weights).sum()
+
+# Calculate the error: error
+error = target - preds
+
+# Calculate the slope: slope
+slope = 2 * input_data * error
+
+# Print the slope
+print(slope)
