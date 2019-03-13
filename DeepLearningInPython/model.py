@@ -33,5 +33,8 @@ model.compile(optimizer = 'adam', loss = 'mean_squared_error')
 print("Loss function: " + model.loss)
 
 ##################################################
-#
+# Fit the model
 ##################################################
+
+# Fit the model
+model.fit(predictors, target)
