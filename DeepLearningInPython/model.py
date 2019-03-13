@@ -11,13 +11,27 @@ from keras.models import Sequential
 n_cols = predictors.shape[1]
 
 # Set up the model: model
-model = sequential()
+model = Sequential()
 
 # Add the first layer
-model.add(Dense(50, activation='relu', input_shape=(ncols,)))
+model.add(Dense(50, activation='relu', input_shape=(n_cols,)))
 
 # Add the second layer
 model.add(Dense(32, activation='relu'))
 
 # Add the output layer
 model.add(Dense(1))
+
+##################################################
+# Compile the model
+##################################################
+
+# Compile the model
+model.compile(optimizer = 'adam', loss = 'mean_squared_error')
+
+# Verify that model contains information from compiling
+print("Loss function: " + model.loss)
+
+##################################################
+#
+##################################################
