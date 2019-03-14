@@ -51,3 +51,20 @@ print(re.search(pattern1, scene_one))
 # Find the script notation at the beginning of the fourth sentence and print it
 pattern2 = r"ARTHUR:"
 print(re.match(pattern2, sentences[3]))
+
+#################################################
+import re
+from nltk.tokenize import word_tokenize
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import regexp_tokenize
+
+
+my_string = "SOLDIER #1: Found them? In Mercea? The coconut's tropical!"
+pattern1 = r'\w+(\?!)'
+pattern2 = r'(\w+|#\d|\?|!)'
+pattern3 = r"(#\d\w+\?!)"
+pattern4 = r"\s+"
+
+print(pattern1, pattern2, pattern3, pattern4)
+tokens = regexp_tokenize(my_string, pattern2)
+print(tokens)
