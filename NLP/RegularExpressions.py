@@ -66,5 +66,5 @@ pattern3 = r"(#\d\w+\?!)"
 pattern4 = r"\s+"
 
 print(pattern1, pattern2, pattern3, pattern4)
-tokens = regexp_tokenize(my_string, pattern2)
+tokens = regexp_tokenize(my_string, pattern3)
 print(tokens)
